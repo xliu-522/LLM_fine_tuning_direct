@@ -1,0 +1,56 @@
+{
+  "data": {
+    "data_file_name": "richie_data.csv",
+    "row_limit": 2000000,
+    "train_test_split_perc": 0.8
+    },
+  "model": {
+    "eval_FineTune_options": ["Evaluate", "FineTune"],
+    "eval_FineTune": "FineTune",
+    "fine_tuning_options": ["PPO", "ILQL", "SFT"],
+    "fine_tuning_algo": "SFT",
+    "quantization": true,
+    "quantization_bit": 8,
+    "base_model_name_options": ["lg_name", "lg_noname", "large_nli", "xl_noname", "xl_nli", "xxl_noname", "xxl_nli"],
+    "base_model_name": "lg_name",
+    "base_model_review_options":["lg_name_review", "lg_noname_review", "large_nli_review", "xl_noname_review", "xl_nli_review", "xxl_noname_review", "xxl_nli_review"],
+    "base_model_review": "lg_name_review",
+    "tag_translation_no_nli": {
+      "No": 0,
+      "Undecided": 0,
+      "Yes": 2
+    },
+    "tag_translation_nli": {
+      "c": 0,
+      "b": 0,
+      "a": 2
+    },
+    "metric_translation": {
+      "0": 0,
+      "2": 1,
+      "1": 0
+    },
+    "evaluate_res_option":["new", "old"],
+    "evaluate_res": "new",
+    "load_fine_tune_model_option":["fine_tune", "base_line"],
+    "load_fine_tune_model":"base_line",
+    "ROC_det_confusion_metrix_options": ["score", "single_confusion_metrix"],
+    "ROC_det_confusion_metrix": "single_confusion_metrix"
+  },
+    "SFT_train":{
+        "num_epoch": 0.5,
+        "per_device_train_batch_size": 2,
+        "per_device_eval_batch_size": 2,
+        "evaluation_strategy": "steps"
+    },
+    "PPO_train":{
+        "kl_penalty_option": ["mse", "abs", "kl"],
+        "kl_penalty": "mse",
+        "learning_rate": 1e-6
+    },
+    "lora":{
+        "lora_r": 32,
+        "lora_alpha": 32,
+        "lora_dropout": 0.05
+    }
+}
