@@ -1,10 +1,11 @@
 # LLM_fine_tuning_direct
-In this project, I fine-tuned Flan-t5 models (large, XL) by implementing two algorithms, supervised fine-tuning (SFT) and proximal [policy optimization](https://arxiv.org/pdf/1707.06347.pdf) (PPO), a reinforcement learning from human feedback (RLHF) algorithm on a risk characteristic QA task.
+In this project, I fine-tuned Flan-t5 models (large, XL) by implementing two algorithms, supervised fine-tuning (SFT) and [proximal policy optimization](https://arxiv.org/pdf/1707.06347.pdf) (PPO), a reinforcement learning from human feedback (RLHF) algorithm using [trl](https://huggingface.co/docs/trl/index) library on a risk characteristic QA task. 
 
 ### Reinforcement Learning from Human Feedback
-<div style="text-align:center">
-<img align = "center", src="rlhf.png" alt="RLHF" width="400"/>
-</div>
+
+<img src="rlhf.png" alt="RLHF" width="400"/>
+
+[More](https://huggingface.co/blog/rlhf) to read
 
 #### install env
 ```
