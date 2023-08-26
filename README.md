@@ -3,7 +3,7 @@ In this project, I fine-tuned Flan-t5 models (large, XL) by implementing two alg
 
 ### Reinforcement Learning from Human Feedback
 <div style="text-align:center">
-<img src="rlhf.png" alt="RLHF" width="400"/>
+<img align = "center", src="rlhf.png" alt="RLHF" width="400"/>
 </div>
 
 #### install env
